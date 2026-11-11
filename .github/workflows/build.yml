@@ -1,0 +1,45 @@
+name: build
+
+on:
+  schedule:
+    # 03:20 UTC+8 daily
+    - cron: "20 19 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "build.py"
+      - "sources.json"
+      - ".github/workflows/build.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build and validate
+        run: python3 build.py
+
+      - name: Publish
+        run: |
+          if git diff --quiet -- rules/AI.list; then
+            echo "AI.list unchanged, nothing to publish"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rules/AI.list
+          git commit -m "chore: rebuild AI.list ($(date -u +%Y-%m-%d))"
+          git push

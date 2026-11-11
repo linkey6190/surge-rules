@@ -1,0 +1,69 @@
+{
+  "name": "AI",
+  "description": "ChatGPT + Gemini 远程规则集，供 Surge RULE-SET 引用",
+  "sources": [
+    "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/openai.list",
+    "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/google-ai.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Gemini/Gemini.list",
+    "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BardAI/BardAI.list"
+  ],
+  "drop_suffix": [
+    "icloud.com",
+    "apple-relay.apple.com",
+    "apple-relay.fastly-edge.com",
+    "apple-relay.cloudflare.com",
+    "apple-relay.akamaized.net",
+    "guzzoni.apple.com",
+    "cp4.cloudflare.com",
+    "gspe1-ssl.ls.apple.com",
+    "apps.mzstatic.com",
+    "stripe.com",
+    "algolia.net",
+    "auth0.com",
+    "sentry.io",
+    "segment.io",
+    "intercom.io",
+    "intercomcdn.com",
+    "launchdarkly.com",
+    "identrust.com",
+    "cloudflareinsights.com"
+  ],
+  "drop_keyword": [
+    "datadog",
+    "colab",
+    "developerprofiles"
+  ],
+  "coverage": {
+    "ChatGPT": [
+      "chatgpt.com",
+      "ab.chatgpt.com",
+      "api.openai.com",
+      "auth.openai.com",
+      "chat.com",
+      "cdn.oaistatic.com",
+      "openai-api.arkoselabs.com",
+      "chatgpt.livekit.cloud",
+      "openaiapi-site.azureedge.net",
+      "openai.com.cdn.cloudflare.net"
+    ],
+    "Gemini": [
+      "gemini.google.com",
+      "generativelanguage.googleapis.com",
+      "aistudio.google.com",
+      "ai.google.dev",
+      "gemini.gstatic.com",
+      "notebooklm.google.com",
+      "geminiweb-pa.clients6.google.com",
+      "alkalicore-pa.clients6.google.com",
+      "proactivebackend-pa.googleapis.com",
+      "bard.google.com",
+      "makersuite.google.com",
+      "aida.googleapis.com",
+      "appsgenaiserver-pa.googleapis.com",
+      "cloudcode-pa.googleapis.com"
+    ]
+  },
+  "max_shrink_pct": 30,
+  "max_growth_pct": 30
+}
