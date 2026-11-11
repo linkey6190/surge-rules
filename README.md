@@ -12,7 +12,7 @@
 
 ```
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/<owner>/surge-rules/main/rules/AI.list,AI,extended-matching,"update-interval=86400",no-resolve
+RULE-SET,https://raw.githubusercontent.com/linkey6190/surge-rules/main/rules/AI.list,AI,extended-matching,"update-interval=86400",no-resolve
 ```
 
 `AI` 换成你自己的策略组名。这条规则要放在 Apple 通用规则集（如 AppleAll.list）之前，否则会被 `DOMAIN-SUFFIX,apple.com` / `icloud.com` 之类的宽泛规则抢先命中。
