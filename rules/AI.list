@@ -1,6 +1,6 @@
 # NAME: AI
 # DESC: ChatGPT + Gemini 远程规则集，供 Surge RULE-SET 引用
-# BUILT: 2026-11-12 01:34:47 UTC
+# BUILT: 2026-11-13 00:34:16 UTC
 # TOTAL: 86
 # SRC: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/openai.list
 # SRC: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/google-ai.list
