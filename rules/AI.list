@@ -1,7 +1,7 @@
 # NAME: AI
 # DESC: ChatGPT + Gemini 远程规则集，供 Surge RULE-SET 引用
-# BUILT: 2026-11-24 04:20:00 UTC
-# TOTAL: 86
+# BUILT: 2026-11-25 03:04:40 UTC
+# TOTAL: 87
 # SRC: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/openai.list
 # SRC: https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/google-ai.list
 # SRC: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI.list
@@ -60,6 +60,7 @@ DOMAIN-SUFFIX,geller-pa.googleapis.com
 DOMAIN-SUFFIX,gemini.google
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,gemini.gstatic.com
+DOMAIN-SUFFIX,gemma.ai
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,host.livekit.cloud
